@@ -76,12 +76,32 @@ p {
     text-align: center;    
     cursor: pointer;
     margin: 0px;
-    border: 2px solid #1976D2;
+    border: 2px;
 }
 
 .selborder{
-  margin: 5px;
-  background-color: #1976D2 !important;
+  margin: 4px;
+  background-color: #1976D2;
+}
+
+#opt3 {
+  border: 2px solid #1976D2;
+}
+
+#gratis {
+  opacity: 0.6;
+}
+
+#basico {
+  opacity: 0.6;
+}
+
+.op3 {
+  color: #1976D2;
+}
+
+.op1, .op2 {
+  opacity: 0.6;
 }
 
 .modalOlvidar{

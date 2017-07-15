@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function check1(){
+			document.getElementById("v1").checked = true;
+		}
+		function check2(){
+			document.getElementById("v2").checked = true;
+		}
+		function check3(){
+			document.getElementById("v3").checked = true;
+		}
+
+
+	</script>
+</head>
+<body>
+<form id="form1" method="GET" action="/puta"></form>
+<div id="opt1" onclick="check1()">opt1</div>
+<div id="opt1" onclick="check2()">opt2</div>
+<div id="opt1" onclick="check3()">opt3</div>
+<input type="radio" name="boton" value="1" id="v1" form="form1">
+<input type="radio" name="boton" value="2" id="v2" form="form1">
+<input type="radio" name="boton" value="3" id="v3" form="form1">
+
+<button form="form1">Enviar</button>
+
+</body>
+</html>
