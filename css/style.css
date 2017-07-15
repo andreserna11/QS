@@ -6,8 +6,8 @@
  * Made By MaterializeCSS.com
  */
 
-nav ul a,
-nav .brand-logo {
+ nav ul a,
+ nav .brand-logo {
   color: #444;
 }
 
@@ -25,9 +25,9 @@ p {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+.parallax-container .section {
+  width: 100%;
+}
 .col-center{
   margin: 30px auto 0px auto !important;
   float: initial !important;
@@ -48,7 +48,7 @@ p {
 }
 
 .background-landing{
-    height: 100vh !important;
+  height: 100vh !important;
 }
 
 /*<--- Paquetes*/
@@ -68,15 +68,15 @@ p {
 }
 
 .cellContent{
-    display: inline-block;
-    width: 120px;
-    height: 80px;
-    line-height: 67px;
-    color: #fff;
-    text-align: center;    
-    cursor: pointer;
-    margin: 0px;
-    border: 2px;
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  line-height: 67px;
+  color: #fff;
+  text-align: center;    
+  cursor: pointer;
+  margin: 0px;
+  border: 2px;
 }
 
 .selborder{
@@ -105,17 +105,40 @@ p {
 }
 
 .fondo1 {
-background-color: #1976D2;
+  background-color: #1976D2;
 }
 .fondo2 {
-background-color: #1976D2;
+  background-color: #1976D2;
 }
 .fondo3 {
-background-color: #1976D2;
+  background-color: #1976D2;
 }
+
+.p-h-32{
+  padding: 0 32px !important;
+}
+
+.side-nav .collapsible-body li a{
+  font-size: 12px;
+}
+
+.dashboard header, main, footer {
+  padding-left: 300px;
+}
+
+.dashboard nav{
+  display: none;
+}
+
 /*Paquetes----->*/
 
 @media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+  .dashboard nav{
+    display: block;
+  }
   .parallax-container .section {
     position: absolute;
     top: 40%;
