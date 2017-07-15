@@ -13,10 +13,11 @@
 
 
   <script type="text/javascript">
-    function changeOption(element, color){
+    function changeOption(element, color, opacity){
       var cols = document.getElementsByClassName(element);
       for(i=0; i<cols.length; i++) {
         cols[i].style.color = color;
+        cols[i].style.opacity = opacity;
       }
     }
 
@@ -24,27 +25,42 @@
       document.getElementById("opt1").style.border = "2px solid #1976D2";
       document.getElementById("opt2").style.border = "2px";
       document.getElementById("opt3").style.border = "2px";
-      changeOption("op1", "#1976D2");
-      changeOption("op2", "black");
-      changeOption("op3", "black");
+
+      document.getElementById("gratis").style.opacity = "1";
+      document.getElementById("basico").style.opacity = ".6";
+      document.getElementById("avanzado").style.opacity = ".6";
+
+      changeOption("op1", "#1976D2", "1");
+      changeOption("op2", "black", "0.6");
+      changeOption("op3", "black", "0.6");
       
     }
     function opt2(){
       document.getElementById("opt1").style.border = "2px";
       document.getElementById("opt2").style.border = "2px solid #1976D2";
       document.getElementById("opt3").style.border = "2px";
-      changeOption("op1", "black");
-      changeOption("op2", "#1976D2");
-      changeOption("op3", "black");
+
+      document.getElementById("gratis").style.opacity = ".6";
+      document.getElementById("basico").style.opacity = "1";
+      document.getElementById("avanzado").style.opacity = ".6";
+
+      changeOption("op1", "black", "0.6");
+      changeOption("op2", "#1976D2", "1");
+      changeOption("op3", "black", "0.6");
       
     }
     function opt3(){
       document.getElementById("opt1").style.border = "2px";
       document.getElementById("opt2").style.border = "2px";
       document.getElementById("opt3").style.border = "2px solid #1976D2";
-      changeOption("op1", "black");
-      changeOption("op2", "black");
-      changeOption("op3", "#1976D2");
+
+      document.getElementById("gratis").style.opacity = ".6";
+      document.getElementById("basico").style.opacity = ".6";
+      document.getElementById("avanzado").style.opacity = "1";
+
+      changeOption("op1", "black", "0.6");
+      changeOption("op2", "black", "0.6");
+      changeOption("op3", "#1976D2", "1");
       
     }
     function check1(){
@@ -171,7 +187,7 @@
       <div class="col s6"></div>
       <div class="col s2 center">
         <div class="cellContent" id="opt1" onclick="opt1(); check1()">
-          <div class="selborder" >
+          <div class="selborder" id="gratis">
             Gratuito
             <input type="radio" name="membership" value="1" id="v1" form="form1">
           </div>
@@ -179,7 +195,7 @@
       </div>
       <div class="col s2 center">
         <div class="cellContent" id="opt2" onclick="opt2(); check2()">
-          <div class="selborder">
+          <div class="selborder" id="basico">
             Básico
             <input type="radio" name="membership" value="2" id="v2" form="form1">
           </div>
@@ -187,7 +203,7 @@
       </div>
       <div class="col s2 center">
         <div class="cellContent" id="opt3" onclick="opt3(); check3()">
-          <div class="selborder">
+          <div class="selborder" id="avanzado">
             Avanzado
             <input type="radio" name="membership" value="3" id="v3" form="form1">
           </div>
