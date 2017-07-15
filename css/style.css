@@ -84,14 +84,8 @@ p {
   background-color: #1976D2 !important;
 }
 
-.fondo1 {
-background-color: #1976D2;
-}
-.fondo2 {
-background-color: #1976D2;
-}
-.fondo3 {
-background-color: #1976D2;
+.modalOlvidar{
+  max-height: 47%;
 }
 /*Paquetes----->*/
 
