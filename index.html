@@ -10,6 +10,54 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="shortcut icon" href="img/favicon.ico" />
+
+
+  <script type="text/javascript">
+    function changeOption(element, color){
+      var cols = document.getElementsByClassName(element);
+      for(i=0; i<cols.length; i++) {
+        cols[i].style.color = color;
+      }
+    }
+
+    function opt1(){
+      document.getElementById("opt1").style.border = "2px solid #1976D2";
+      document.getElementById("opt2").style.border = "2px";
+      document.getElementById("opt3").style.border = "2px";
+      changeOption("op1", "#1976D2");
+      changeOption("op2", "black");
+      changeOption("op3", "black");
+      
+    }
+    function opt2(){
+      document.getElementById("opt1").style.border = "2px";
+      document.getElementById("opt2").style.border = "2px solid #1976D2";
+      document.getElementById("opt3").style.border = "2px";
+      changeOption("op1", "black");
+      changeOption("op2", "#1976D2");
+      changeOption("op3", "black");
+      
+    }
+    function opt3(){
+      document.getElementById("opt1").style.border = "2px";
+      document.getElementById("opt2").style.border = "2px";
+      document.getElementById("opt3").style.border = "2px solid #1976D2";
+      changeOption("op1", "black");
+      changeOption("op2", "black");
+      changeOption("op3", "#1976D2");
+      
+    }
+    function check1(){
+      document.getElementById("v1").checked = true;
+    }
+    function check2(){
+      document.getElementById("v2").checked = true;
+    }
+    function check3(){
+      document.getElementById("v3").checked = true;
+    }
+
+  </script>
 </head>
 <body>
 
@@ -116,85 +164,109 @@
     <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
   </div>
 </section>
-
 <section id="Membresias" class="background-membresia">
+  <form id="form1" method="POST" action="/comprar"></form>
   <div class="container">
     <div class="row">
       <div class="col s6"></div>
-      <div class="col s2 center"><div class="cellContent"><div class="selborder"><span>Gratuito</span></div></div></div>
-      <div class="col s2 center"><div class="cellContent"><div class="selborder">Básico</div></div></div>
-      <div class="col s2 center"><div class="cellContent"><div class="selborder">Avanzado</div></div></div>
+      <div class="col s2 center">
+        <div class="cellContent" id="opt1" onclick="opt1(); check1()">
+          <div class="selborder" >
+            Gratuito
+            <input type="radio" name="membership" value="1" id="v1" form="form1">
+          </div>
+        </div>
+      </div>
+      <div class="col s2 center">
+        <div class="cellContent" id="opt2" onclick="opt2(); check2()">
+          <div class="selborder">
+            Básico
+            <input type="radio" name="membership" value="2" id="v2" form="form1">
+          </div>
+        </div>
+      </div>
+      <div class="col s2 center">
+        <div class="cellContent" id="opt3" onclick="opt3(); check3()">
+          <div class="selborder">
+            Avanzado
+            <input type="radio" name="membership" value="3" id="v3" form="form1">
+          </div>
+        </div>
+      </div>
     </div>
     <div class="row">
       <div class="col s6"><span><b>Suscripción</b></span></div>
-      <div class="col s2 center"><span><b>$&nbsp;0</b></span></div>
-      <div class="col s2 center"><b>$&nbsp;99</b></div>
-      <div class="col s2 center"><b>$&nbsp;399</b></div>
+      <div class="col s2 center"><b class="op1">$&nbsp;0</b></div>
+      <div class="col s2 center"><b class="op2">$&nbsp;99</b></div>
+      <div class="col s2 center"><b class="op3">$&nbsp;399</b></div>
     </div>    
     <div class="row">
       <div class="divider"></div>
       <div class="col s6 ">Introducción al mercado de Cryptodivisas</div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op1">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op2">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
     </div>    
     <div class="row">
       <div class="divider"></div>
       <div class="col s6">Soportes y Resistencias</div>      
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op1">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op2">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
     </div> 
     <div class="row">
       <div class="divider"></div>
       <div class="col s6">Operación en Vivo de Cryptodivisas</div>      
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op1">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op2">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
     </div> 
     <div class="row">
       <div class="divider"></div>
       <div class="col s6">Introducción al análisis técnico</div>      
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+      <div class="col s2 center"><i class="material-icons op2">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
     </div> 
     <div class="row">
       <div class="divider"></div>
       <div class="col s6">Acceso a la red social de Trading</div>      
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><span><b>2 Semanas</b></span></div>
-      <div class="col s2 center"><span><b>8 Semanas</b></span></div>
+      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+      <div class="col s2 center"><b class="op2">2 Semanas</b></div>
+      <div class="col s2 center"><b class="op3">8 Semanas</b></div>
     </div> 
     <div class="row">
       <div class="divider"></div>
       <div class="col s6">Análisis fundamental de las Cryptodivisas</div>      
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+      <div class="col s2 center"><i class="material-icons op2">&#xE5CD;</i></div>
+      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
     </div> 
     <div class="row">
       <div class="divider"></div>
       <div class="col s6">Money Management en Cryptodivisas</div>      
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+      <div class="col s2 center"><i class="material-icons op2">&#xE5CD;</i></div>
+      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
     </div> 
     <div class="row">
       <div class="divider"></div>
       <div class="col s6">Patrones psicológicos del mercado</div>      
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+      <div class="col s2 center"><i class="material-icons op2">&#xE5CD;</i></div>
+      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
     </div> 
     <div class="row">
       <div class="divider"></div>
       <div class="col s6">Conceptualización de la <b>ICO</b> de una cryptodivisa</div>      
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE5CD;</i></div>
-      <div class="col s2 center"><i class="material-icons">&#xE876;</i></div>
+      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+      <div class="col s2 center"><i class="material-icons op2">&#xE5CD;</i></div>
+      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
     </div> 
   </div>
+  <center>
+   <button class="waves-effect waves-light btn blue darken-2" form="form1">Continuar</button>
+  </center>
 </section>
 
 <div class="divider"></div>
@@ -297,6 +369,7 @@
               <i class="material-icons prefix">&#xE853;</i>
               <input class="validate barra" type="text" id="correo"
                 name="correo"> <label for="correo">Correo electrónico </label>
+
             </div>
           </div>
           <div class="row">
